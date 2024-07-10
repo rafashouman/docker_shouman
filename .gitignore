@@ -1,0 +1,9 @@
+# Ignorar pastas
+bezkoder-api/
+bezkoder-ui/
+
+# Ignorar arquivos
+*.log
+*.txt
+*.tmp
+.env

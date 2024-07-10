@@ -1,0 +1,60 @@
+{
+  "name": "shouman.xyz",
+  "version": "3.3.3",
+  "description": "Meu site!",
+  "main": "src/pages/index.tsx",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky install",
+    "lint": "npx eslint src/",
+    "lint:fix": "npx eslint src/ --fix",
+    "prepush": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RafaShouman/shouman.xyz.git"
+  },
+  "keywords": [
+    "js",
+    "collisions",
+    "cannon",
+    "arkanoid",
+    "physics"
+  ],
+  "author": "Rafael Shouman <shoumanrafael@hotmail.com> (https://shoumanz.in/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shoumanzin/shoumanz.in.git/issues"
+  },
+  "homepage": "https://github.com/shoumanzin/shoumanz.in.git#readme",
+  "dependencies": {
+    "@react-three/cannon": "6.5.2",
+    "@react-three/fiber": "8.13.3",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.5",
+    "next": "13.4.5",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-spring": "^9.7.3",
+    "react-swipeable": "^7.0.1",
+    "sass": "^1.63.4",
+    "swiper": "^11.0.3",
+    "three": "0.153.0",
+    "typescript": "5.1.3"
+  },
+  "devDependencies": {
+    "husky": "^7.0.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

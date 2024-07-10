@@ -1,0 +1,20 @@
+.gallery-polaroid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.gallery-polaroid-box {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  overflow: hidden;
+}
+.gallery-polaroid-unique {
+  max-width: 100%;
+  mix-blend-mode: multiply;
+}

@@ -1,0 +1,8 @@
+@import '../vars.scss';
+.logo {
+    z-index: 99;
+    cursor: pointer;
+    &:hover {
+        @include shakeAnimate;
+    }
+}
