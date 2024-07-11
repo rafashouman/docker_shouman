@@ -14,11 +14,11 @@ services:
       - db:/data/db
     networks:
       - backend
-  
-  bezkoder-api:
+
+  express_request_app:
     depends_on:
       - mongodb
-    build: ./bezkoder-api
+    build: ./express_request_app
     restart: unless-stopped
     env_file: ./.env
     ports:
@@ -32,23 +32,9 @@ services:
       - CLIENT_ORIGIN=$CLIENT_ORIGIN
     networks:
       - backend
-      - frontend
 
-  bezkoder-ui:
-    depends_on:
-      - bezkoder-api
-    build:
-      context: ./bezkoder-ui
-      args:
-        - REACT_APP_API_BASE_URL=$CLIENT_API_BASE_URL
-    ports:
-      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
-    networks:
-      - frontend  
-
-volumes: 
+volumes:
   db:
 
 networks:
   backend:
-  frontend:

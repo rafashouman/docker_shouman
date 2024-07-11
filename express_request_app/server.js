@@ -4,11 +4,14 @@ import cors from "cors";
 import db from "./app/models/index.js"
 //require("./app/routes/data.routes").default(app);
 import router from "./app/routes/data.routes.js"
+import { config } from 'dotenv';
+
+config();
 
 const app = express();
 
 var corsOptions = {
-  origin: "*"
+  origin: process.env.CLIENT_ORIGIN || "http://localhost:8081"
 };
 
 app.use(cors(corsOptions));
@@ -33,7 +36,7 @@ db.mongoose
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Shouman Show" });
+  res.json({ message: "Welcome to the jungle, baby!" });
 });
 
 // set port, listen for requests

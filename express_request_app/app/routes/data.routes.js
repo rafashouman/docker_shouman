@@ -5,9 +5,7 @@ import {
   findOne,
   update,
   deleteOne,
-  deleteAll,
-  requestVtexProduct,
-  requestVtexProductSKU
+  deleteAll
 } from "../controllers/data.controller.js"
 
 import express from 'express';
@@ -33,15 +31,6 @@ router.delete("/", deleteAll);
 
 // Retrieve all published data
 router.get("/published", findAllPublished);
-
-// Request VTEX
-router.post("/products_vtex", requestVtexProduct)
-
-// Request VTEX
-router.post("/products_vtex_sku", requestVtexProductSKU)
-
-// Request VTEX Queue
-/* router.data("/products_vtex_queue", requestVtexProductQueue) */
 
 router.use("/api/data", router);
 
